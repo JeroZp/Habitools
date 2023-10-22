@@ -546,7 +546,7 @@ body{
 }
 
 .content main .bottom-data .reminders .task-list li .bx{
-  cursor: pointer;  
+    cursor: pointer;  
 }
 
 .content main .bottom-data .reminders .task-list li.completed{
@@ -558,7 +558,7 @@ body{
 }
 
 .content main .bottom-data .reminders .task-list li:last-child{
-   margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -619,5 +619,6 @@ body{
     .content main .bottom-data .reminders .task-list{
         min-width: 340px;
     }
+    
 
 }

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="{% static '/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'estilos.css' %}">
+
     <title>Habitools</title>
 </head>
 <body>
@@ -64,14 +66,41 @@
                 </div>
                 
             </div>
-
+                
+            <div class="Calendar">
+                <div class="container">
+                    <h2> Agrega cuando quieres hacer tu Habit(Escoge una fecha, hora y el habito)</h2>
+                </div> 
+                <br>
+                </br>
+                    <div class="calendario">
+                        <div class="controles">
+                            <button id="anterior">Anterior</button>
+                            <span id="mes-anio">Octubre 2023</span>
+                            <button id="siguiente">Siguiente</button>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Domingo</th>
+                                    <th>Lunes</th>
+                                    <th>Martes</th>
+                                    <th>Miércoles</th>
+                                    <th>Jueves</th>
+                                    <th>Viernes</th>
+                                    <th>Sábado</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dias">
+                            
+                            </tbody>
+                        </table>
+                            </div>
+                        </div>
+                    </div>
             </div>
 
-        </main>
-
-    </div>
-
     <script src="{% static '/index.js' %}"></script>
-
+    <script src="{% static '/script.js' %}"></script>
 </body>
 </html>

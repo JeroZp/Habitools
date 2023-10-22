@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="{% static '/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'estilosH.css' %}">
     <title>Habitools</title>
 </head>
 <body>
@@ -65,13 +66,32 @@
                 
             </div>
 
+            <h1>Lista de Habitos</h1>
+            <div class="lista">
+                <ul id="miLista">
+                    <li>
+                        <input type="checkbox" id="tarea1" name="tareas" value="Tarea 1">
+                        <label for="tarea1">Tarea 1</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="tarea2" name="tareas" value="Tarea 2">
+                        <label for="tarea2">Tarea 2</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="tarea3" name="tareas" value="Tarea 3">
+                        <label for="tarea3">Tarea 3</label>
+                    </li>
+                </ul>
             </div>
+            <button id="realizarTareas">Realizar Tareas</button>
+    
 
-        </main>
 
+            
     </div>
 
     <script src="{% static '/index.js' %}"></script>
+    <script src="{% static '/script.js' %}"></script>
 
 </body>
 </html>
