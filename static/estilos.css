@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.calendario {
+    margin: 0 auto;
+    width: 80%;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+thead {
+    background-color: #068ec0;
+}
+
+td.otro-mes {
+    color: #7ce4a5;
+}
+
+/* Estilos para resaltar el día actual, por ejemplo */
+td.Hoy {
+    background-color: #007acc;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+
