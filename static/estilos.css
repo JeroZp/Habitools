@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-h1 {
+h1, h2 {
     text-align: center;
 }
 
@@ -26,16 +26,16 @@ th, td {
 }
 
 thead {
-    background-color: #068ec0;
+    background-color: #6DDDD0;
 }
 
 td.otro-mes {
     color: #7ce4a5;
 }
 
-/* Estilos para resaltar el día actual, por ejemplo */
+
 td.Hoy {
-    background-color: #007acc;
+    background-color: #6DDDD0;
     color: rgb(255, 255, 255);
     font-weight: bold;
 }
