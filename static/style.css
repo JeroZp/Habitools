@@ -73,7 +73,7 @@ body{
 .sidebar .logo{
     font-size: 24px;
     font-weight: 700;
-    height: 56px;
+    width: 25px;
     display: flex;
     align-items: center;
     color: var(--primary);
