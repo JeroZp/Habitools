@@ -25,6 +25,7 @@ urlpatterns = [
     path('index.html', habitsViews.home),
     path('Calendar.html', habitsViews.Calendar),
     path('habits.html', habitsViews.habits),
-    path('progress.html', habitsViews.progress)
+    path('progress.html', habitsViews.progress),
+    path('mis_habits.html', habitsViews.mis_habits_view),
     
 ]
