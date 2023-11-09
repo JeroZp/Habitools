@@ -14,3 +14,6 @@ def habits(request):
 
 def progress(request):
     return render(request, 'progress.html')
+
+def mis_habits_view(request):
+    return render(request, 'mis_habits.html')
