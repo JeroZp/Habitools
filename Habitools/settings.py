@@ -84,7 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'db_habitools',
         'USER': 'root',
-        'PASSWORD': 'Jero1123',
+        'PASSWORD': 'Enero1890',
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
