@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'estilos.css' %}">
 
     <title>Habitools</title>
-</head>
+</head>analyse
 <body>
     <!-- Sidebar -->
     <div class="sidebar">
@@ -88,10 +88,35 @@
                         </table>
                             </div>
                         </div>
+                            <table>
+                                <thead>
+                                    
+                                </thead>
+                                <tbody id="dias">
+                                    <!-- ... (código existente) ... -->
+                                </tbody>
+                            </table>
+                            <form id="habitForm">
+                                <label for="fecha">Fecha:</label>
+                                <input type="date" id="fecha" required>
+            
+                                <label for="hora">Hora:</label>
+                                <input type="time" id="hora" required>
+            
+                                <label for="habito">Hábito:</label>
+                                <input type="text" id="habito" required>
+            
+                                <button type="button" onclick="guardarHabit()">Guardar</button>
+                            </form>
                     </div>
+                </div>
             </div>
 
-    <script src="{% static '/index.js' %}"></script>
-    <script src="{% static '/script.js' %}"></script>
+                    
+            </div>
+            <script src="{% static 'index.js' %}"></script>
+            <script src="{% static 'script.js' %}"></script>
+
 </body>
-</html>
+</html>       
+

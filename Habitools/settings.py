@@ -84,7 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'db_habitools',
         'USER': 'root',
-        'PASSWORD': 'Jero1123',
+        'PASSWORD': 'Enero1890',
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
@@ -137,5 +137,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # VARIABLES DE REDIRECCIÓN DE LOGIN Y LOGOUT
-LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'login_view'
+LOGIN_REDIRECT_URL = '/index.html'
+LOGOUT_REDIRECT_URL = '/login.html'
