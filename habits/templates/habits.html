@@ -73,13 +73,14 @@
                     <center>
                     <div id="seleccion">
                         <h2>Selecciona una categoría y un hábito:</h2>
-                        <select id="categorias">
-                    {% for categoria in categorias %}
-                        <option value="{{ categoria }}">{{ categoria }}</option>
-                    {% endfor %}
+                        <select id="categorias" onchange="cambiarOpciones()">
+                            <option>Selecciona un habito</option>
+                            <option value="salud">Salud y Bienestar</option>
+                            <option value="personal">Desarrollo Personal</option>
+                            <option value="social">Relaciones y Sociales</option>
                         </select>
                         <select id="habitos">
-                        <option value="" disabled selected>Selecciona un hábito</option>
+                        
                         </select>
                     </center> 
                 <br>
@@ -121,5 +122,42 @@
     </div>
     <script src="{% static '/Categorias.js' %}"></script>
     <script src="{% static '/index.js' %}"></script>
+    <script>
+        function cambiarOpciones() {
+          var categorias = document.getElementById("categorias");
+          var habitosSelect = document.getElementById("habitos");
+          var opciones = habitosSelect.getElementsByTagName("option");
+    
+          for (var i = opciones.length - 1; i >= 0; i--) {
+            opciones[i].remove();
+          }
+
+          switch (categorias.value) {
+            case "salud":
+              agregarOpcion("Hidratación", "Hidratación");
+              agregarOpcion("Regular", " Ejercicio Regular");
+              break;
+            case "personal":
+              agregarOpcion("Ahorro", "Hábito de Ahorro");
+              agregarOpcion("Lectura", "Hábito de Lectura");
+              break;
+            case "social":
+              agregarOpcion("Tiempo", "Tiempo de Calidad con la Familia");
+              agregarOpcion("Conexiones", "Conexiones Sociales");
+              break;
+            default:
+              break;
+          }
+        }
+
+        function agregarOpcion(valor, texto) {
+            var nuevaOpcion = document.createElement("option");
+            nuevaOpcion.value = valor;
+            nuevaOpcion.text = texto;
+            document.getElementById("habitos").add(nuevaOpcion);
+          }
+    
+      </script>
+    
 </body>
 </html>

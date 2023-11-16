@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="{% static '/style.css' %}">
+    <link rel="stylesheet" href="{% static '/misHabits.css' %}">
     <title>Habitools</title>
 </head>
 <body>
@@ -56,7 +57,55 @@
                     <ul class="breadcrumb">
                     </ul>
                 </div>
-            </div>                     
+            </div> 
+            <header>
+                <h1>Hábitos de Salud y Bienestar</h1>
+                <h2>Hidratación</h2>
+            </header>
+        
+            <section>
+                <h3>Recomendaciones para la hidratación</h3>
+                <p>
+                    La hidratación es crucial para mantener una buena salud y bienestar. Aquí hay algunas recomendaciones generales sobre la cantidad de agua que una persona debe tomar al día:
+                </p>
+                <ul>
+                    <li>Se recomienda beber al menos 8 vasos (aproximadamente 2 litros) de agua al día.</li>
+                    <li>Las necesidades individuales pueden variar según factores como la edad, el clima y la actividad física.</li>
+                    <li>Escucha a tu cuerpo: bebe más agua si sientes sed y ajusta tu ingesta en función de tus necesidades personales.</li>
+                </ul>
+                <p>
+                    Además de agua, también puedes obtener líquidos de otras fuentes como infusiones, frutas y verduras.
+                </p>
+            </section>
+        
+            <section>
+                <h3>Más sobre el hábito de Hidratación</h3>
+                <p>
+                    La hidratación adecuada no solo beneficia a tu salud física, sino que también puede tener un impacto positivo en tu energía, concentración y bienestar general. Establecer un hábito regular de beber agua a lo largo del día puede ayudarte a mantenerte hidratado y sentirte mejor.
+                </p>
+                <p>
+                    Recuerda que estas son recomendaciones generales, y es importante adaptarlas a tus necesidades individuales y consultar con profesionales de la salud si tienes inquietudes específicas.
+                </p>
+            </section>
+        
+            <footer>
+                <p>&copy; 2023 Habitools</p>
+            </footer>
+            
+            {% if habits %}
+        <ul>
+            {% for habit in habits %}
+                <li>
+                    <p><strong>Fecha:</strong> {{ habit.fecha }}</p>
+                    <p><strong>Hora:</strong> {{ habit.hora }}</p>
+                    <p><strong>Hábito:</strong> {{ habit.habito }}</p>
+                    <hr>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay hábitos guardados.</p>
+    {% endif %}
     </div>
     <script src="{% static '/index.js' %}"></script>
 </body>
