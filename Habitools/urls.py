@@ -21,14 +21,14 @@ from habits import views as habitsViews
 urlpatterns = [
 
     path('admin/', admin.site.urls),
-    path('', habitsViews.login_view),
+    path('', habitsViews.bienvenida),
     path('login.html', habitsViews.login_view),
-    path('index.html', habitsViews.home),
+    path('signup.html', habitsViews.registro),
+    path('home.html', habitsViews.home),
     path('Calendar.html', habitsViews.Calendar),
     path('habits.html', habitsViews.habits),
     path('progress.html', habitsViews.progress),
     path('mis_habits.html', habitsViews.mis_habits_view),
-    #path('logout/', habitsViews.logout_view),
     path('accounts/', include('django.contrib.auth.urls')),
     path('mis_habits/', habitsViews.mostrar_habitos),
 

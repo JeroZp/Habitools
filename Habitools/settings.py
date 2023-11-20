@@ -136,6 +136,8 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+SESSION_SAVE_EVERY_REQUEST = True
+
 # VARIABLES DE REDIRECCIÓN DE LOGIN Y LOGOUT
 LOGIN_REDIRECT_URL = '/index.html'
 LOGOUT_REDIRECT_URL = '/login.html'
