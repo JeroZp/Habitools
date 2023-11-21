@@ -58,7 +58,10 @@
                     </ul>
                 </div>
             </div> 
-            <header>
+            {% for habito in habitos %}
+                <p>{{ habito.nombre }}</p>
+            {% endfor %}
+            {% comment %} <header>
                 <h1>Hábitos de Salud y Bienestar</h1>
                 <h2>Hidratación</h2>
             </header>
@@ -106,7 +109,7 @@
     {% else %}
         <p>No hay hábitos guardados.</p>
     {% endif %}
-    </div>
+    </div> {% endcomment %}
     <script src="{% static '/index.js' %}"></script>
 </body>
-</html>
+</html> 
