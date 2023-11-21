@@ -3,6 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
+from .models import Habito
 
 
 # Create your views here
@@ -27,7 +28,7 @@ def registro(request):
         # Si es una solicitud GET, simplemente muestra el formulario
         form = UserCreationForm()
     
-    return render(request, 'login.html', {'form': form})
+    return render(request, 'signup.html', {'form': form})
 
 #@login_required
 def home(request):
@@ -47,7 +48,8 @@ def progress(request):
 
 #@login_required
 def mis_habits_view(request):
-    return render(request, 'mis_habits.html')
+    habitos = Habito.objects.filter(usuario=request.user)
+    return render(request, 'mis_habits.html', {'habitos': habitos})   
 
 
 @login_required
@@ -65,12 +67,24 @@ def login_view(request):
 
 def logout_view(request):
     logout(request)
-    return redirect('login.html')
+    return redirect('login_View')
 
 def mostrar_habitos(request):
-    # Obtener los hábitos almacenados en localStorage
-    habits = request.session.get('habits', [])
+    # Obtener los hábitos almacenados en la base de datos
+    habitos = Habito.objects.filter(usuario=request.user)
 
     # Pasar la información a la plantilla
-    context = {'habits': habits}
-    return render(request, 'mis_habits', context)
+    context = {'habitos': habitos}
+    return render(request, 'mis_habits.html', context)
+
+
+@login_required
+def guardar_habito(request):
+    if request.method == 'POST':
+        nombre_habito = request.POST['nombre_habito']
+        categoria_habito = request.POST['categoria_habito']
+        Habito.objects.create(nombre=nombre_habito, categoria=categoria_habito, usuario=request.user)
+        return redirect('mis_habits')
+    
+    
+
