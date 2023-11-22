@@ -88,6 +88,13 @@ def guardar_habito(request):
     
 def get_chart(request):
 
-    chart= {}
+    chart = {
+        'xAxies': [
+            {
+                'type': 'Category',
+                'data': ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+            }
+        ],
+    }
 
     return JsonResponse(chart)

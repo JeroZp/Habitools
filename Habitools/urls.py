@@ -33,5 +33,4 @@ urlpatterns = [
     path('mis_habits/', habitsViews.mostrar_habitos),
     #path('progress.html/', include(habits.urls)),
 
-
 ]
