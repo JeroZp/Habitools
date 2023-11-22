@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from .models import Habito
@@ -86,5 +86,8 @@ def guardar_habito(request):
         Habito.objects.create(nombre=nombre_habito, categoria=categoria_habito, usuario=request.user)
         return redirect('mis_habits')
     
-    
+def get_chart(request):
 
+    chart= {}
+
+    return JsonResponse(chart)

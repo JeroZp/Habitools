@@ -31,6 +31,7 @@ urlpatterns = [
     path('mis_habits.html', habitsViews.mis_habits_view),
     path('accounts/', include('django.contrib.auth.urls')),
     path('mis_habits/', habitsViews.mostrar_habitos),
+    #path('progress.html/', include(habits.urls)),
 
 
 ]

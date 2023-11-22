@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-tr#*sy!xl*c4a9nu#$iihupr$mrji$b0f_@6d$3)kcs%iwa(0^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['34.30.9.195']
 
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), #se agrega el directorio "static", uniendo el sistema operativo, con el directorio base y static
@@ -84,7 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'db_habitools',
         'USER': 'root',
-        'PASSWORD': 'Enero1890',
+        'PASSWORD': 'Jero1123',
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
